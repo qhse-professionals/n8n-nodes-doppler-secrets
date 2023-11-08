@@ -1,18 +1,14 @@
 # n8n-nodes-doppler
 
-This is an n8n community node. It lets you use Doppler in your n8n workflows.
+> [!NOTE]
+> This version of the `n8n-nodes-doppler` n8n Community Node is my (@4lch4) fork of [the original][0].
+> Due to the sensitive nature of the data that this node handles, I have forked it to ensure that I can maintain it and keep it up to date with the latest version of n8n & Doppler. I have also added a few features that I need for my own workflows.
 
-[n8n](https://n8n.io/) is a [fair-code licensed](https://docs.n8n.io/reference/license/) workflow automation platform.
-
-[Installation](#installation)  
-[Operations](#operations)  
-[Credentials](#credentials)
-[Resources](#resources)  
-[Version history](#version-history)
+This is an n8n community node that lets you use [Doppler][1] for secret/variable management in your n8n workflows.
 
 ## Installation
 
-Follow the [installation guide](https://docs.n8n.io/integrations/community-nodes/installation/) in the n8n community nodes documentation.
+The folks behind n8n have created [an installation guide][2] in the n8n community nodes documentation that shows you how to install a community node using a GUI or CLI. Simply use `@4lch4/n8n-nodes-doppler` for the package name.
 
 ## Operations
 
@@ -24,9 +20,28 @@ This node also includes credentials that can be used with the HTTP Request node
 
 ## Resources
 
-* [n8n community nodes documentation](https://docs.n8n.io/integrations/community-nodes/)
+- [n8n community nodes documentation][3]
+
+## TODO
+
+- [ ] Add a Compatibility section to the README.
 
 ## Version history
 
-0.1.0 - Initial Release
+### 0.1.1
 
+```diff
+~ Updated README to include a link to the original repo.
++ Added a note to the README about this being a fork.
+```
+
+### 0.1.0
+
+Initial Release
+
+- 0.1.0 - Initial Release
+
+[0]: https://github.com/Joffcom/n8n-nodes-doppler
+[1]: https://doppler.com
+[2]: https://docs.n8n.io/integrations/community-nodes/installation
+[3]: https://docs.n8n.io/integrations/community-nodes
