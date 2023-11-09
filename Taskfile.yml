@@ -1,0 +1,23 @@
+version: 3
+
+# Source .env file
+dotenv: [.env]
+
+tasks:
+  pretty:
+    desc: Uses the Prettier CLI tool to format the codebase.
+    aliases: [p, format, fmt]
+    cmd: prettier --write .
+
+  clean:
+    desc: Deletes the build output directory, any installed dependencies, any generated files, and any built Docker images.
+    aliases: [c]
+    cmd: rm -rf dist node_modules package-lock.json bun.lockb
+
+  push:
+    desc: Push any git changes and tags to the remote repository.
+    aliases: [gp]
+    cmds:
+      - git push
+      - git push --tags
+
