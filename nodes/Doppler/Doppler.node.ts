@@ -1,12 +1,11 @@
 import { INodeType, INodeTypeDescription } from 'n8n-workflow'
-// import { shareFields, shareOperations } from './descriptions'
 
 export class Doppler implements INodeType {
   description: INodeTypeDescription = {
     displayName: 'Doppler',
     name: 'doppler',
     icon: 'file:doppler.svg',
-    group: ['transform'],
+    group: ['input'],
     version: 1,
     subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
     description: 'Interact with the Doppler API.',
@@ -15,11 +14,41 @@ export class Doppler implements INodeType {
     },
     inputs: ['main'],
     outputs: ['main'],
+    credentials: [
+      {
+        name: 'dopplerApi',
+        required: true,
+      },
+    ],
     requestDefaults: {
       baseURL: 'https://api.doppler.com/v1',
       headers: {},
     },
     properties: [
+      {
+        displayName: 'Operation',
+        name: 'operation',
+        type: 'options',
+        noDataExpression: true,
+        default: 'listConfigSecrets',
+        options: [
+          {
+            name: 'List Config Secrets',
+            value: 'listConfigSecrets',
+            routing: {
+              request: {
+                method: 'GET',
+                url: '/v3/configs/config/secrets',
+                qs: {
+                  project: '={{ encodeURIComponent($parameter.project) }}',
+                  config: '={{ encodeURIComponent($parameter.config) }}',
+                },
+              },
+            },
+          },
+        ],
+      },
+
       {
         displayName: 'Project',
         name: 'project',
