@@ -13,7 +13,7 @@ export class DopplerApi implements ICredentialType {
       displayName: 'API Token',
       name: 'apiToken',
       type: 'string',
-      default: '',
+      default: 'dp.st.<config>.<token>',
       typeOptions: {
         password: true,
       },
