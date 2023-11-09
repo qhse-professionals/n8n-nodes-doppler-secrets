@@ -1,6 +1,6 @@
 {
   "name": "@4lch4/n8n-nodes-doppler",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Enables you to use Doppler in your n8n workflows.",
   "keywords": [
     "n8n-community-node-package",
