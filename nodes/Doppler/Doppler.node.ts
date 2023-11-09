@@ -26,8 +26,8 @@ export class Doppler implements INodeType {
     },
     properties: [
       {
-        displayName: 'Operation',
-        name: 'operation',
+        displayName: 'Request Operation',
+        name: 'requestOperation',
 				type: 'options',
         noDataExpression: true,
         default: 'listConfigSecrets',
@@ -57,7 +57,7 @@ export class Doppler implements INodeType {
 				default: 'n8n',
 				displayOptions: {
 					show: {
-						operation: ['listConfigSecrets'],
+						requestOperation: ['listConfigSecrets'],
 					}
 				},
       },
@@ -68,7 +68,7 @@ export class Doppler implements INodeType {
         default: 'nonprod',
 				displayOptions: {
 					show: {
-						operation: ['listConfigSecrets'],
+						requestOperation: ['listConfigSecrets'],
 					}
 				},
       },
