@@ -14,8 +14,9 @@
   },
   "license": "MIT",
   "author": {
-    "name": "Jonathan",
-    "email": "jonathan@joffcom.net"
+    "name": "4lch4",
+    "email": "hey@4lch4.email",
+    "url": "https://4lch4.com"
   },
   "main": "index.js",
   "files": [
@@ -28,9 +29,6 @@
     "lint": "eslint nodes credentials package.json",
     "lintfix": "eslint nodes credentials package.json --fix",
     "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes credentials package.json"
-  },
-  "dependencies": {
-    "@dopplerhq/node-sdk": "^1.2.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.6",
