@@ -28,13 +28,14 @@ export class Doppler implements INodeType {
       {
         displayName: 'Operation',
         name: 'operation',
-        type: 'options',
+				type: 'options',
         noDataExpression: true,
         default: 'listConfigSecrets',
         options: [
           {
             name: 'List Config Secrets',
-            value: 'listConfigSecrets',
+						value: 'listConfigSecrets',
+						action: 'Returns all the secrets for a config in a project',
             routing: {
               request: {
                 method: 'GET',
