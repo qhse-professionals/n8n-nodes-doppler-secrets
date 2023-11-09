@@ -53,25 +53,23 @@ export class Doppler implements INodeType {
         displayName: 'Project',
         name: 'project',
         type: 'string',
-        default: 'n8n',
-        routing: {
-          send: {
-            property: 'project',
-            type: 'query',
-          },
-        },
+				default: 'n8n',
+				displayOptions: {
+					show: {
+						operation: ['listConfigSecrets'],
+					}
+				},
       },
       {
         displayName: 'Config',
         name: 'config',
         type: 'string',
         default: 'nonprod',
-        routing: {
-          send: {
-            property: 'config',
-            type: 'query',
-          },
-        },
+				displayOptions: {
+					show: {
+						operation: ['listConfigSecrets'],
+					}
+				},
       },
     ],
   }
