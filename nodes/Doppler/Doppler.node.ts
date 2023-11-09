@@ -2,7 +2,7 @@ import { INodeType, INodeTypeDescription } from 'n8n-workflow'
 
 export class Doppler implements INodeType {
   description: INodeTypeDescription = {
-    displayName: 'Doppler',
+    displayName: '@4lch4/Doppler',
     name: 'doppler',
     icon: 'file:doppler.svg',
     group: ['input'],
