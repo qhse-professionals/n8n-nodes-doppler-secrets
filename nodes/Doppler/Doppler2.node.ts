@@ -47,6 +47,21 @@ export class Doppler2 implements INodeType {
               },
             },
           },
+          {
+            name: 'List Config Secrets 2',
+						value: 'listConfigSecrets2',
+						action: 'Returns all the secrets for a config in a project',
+            routing: {
+              request: {
+                method: 'GET',
+                url: '/v3/configs/config/secrets',
+                qs: {
+                  project: '={{ encodeURIComponent($parameter.project) }}',
+                  config: '={{ encodeURIComponent($parameter.config) }}',
+                },
+              },
+            },
+          }
         ],
       },
 
