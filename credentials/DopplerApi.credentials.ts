@@ -24,7 +24,7 @@ export class DopplerApi implements ICredentialType {
     type: 'generic',
     properties: {
       headers: {
-        Authorization: '={{"Bearer " + $credentials.token}}',
+        Authorization: '={{"Bearer " + $credentials.apiToken}}',
       },
     },
   }
