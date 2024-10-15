@@ -21,7 +21,7 @@ export class Doppler implements INodeType {
       },
     ],
     requestDefaults: {
-      baseURL: 'https://api.doppler.com/v1',
+      baseURL: 'https://api.doppler.com',
       headers: {},
     },
     properties: [
