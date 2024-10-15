@@ -1,22 +1,22 @@
 {
-  "name": "@4lch4/n8n-nodes-doppler",
-  "version": "0.3.2",
+  "name": "@qhse-professionals/n8n-nodes-doppler",
+  "version": "0.0.1",
   "description": "Enables you to use Doppler in your n8n workflows.",
   "keywords": [
     "n8n-community-node-package",
     "doppler",
     "n8n"
   ],
-  "homepage": "https://github.com/4lch4/n8n-nodes-doppler",
+  "homepage": "https://github.com/qhse-professionals/n8n-nodes-doppler",
   "repository": {
     "type": "git",
-    "url": "git@github.com:4lch4/n8n-nodes-doppler.git"
+    "url": "git@github.com:qhse-professionals/n8n-nodes-doppler.git"
   },
   "license": "MIT",
   "author": {
-    "name": "4lch4",
-    "email": "hey@4lch4.email",
-    "url": "https://4lch4.com"
+    "name": "QHSE Professionals",
+    "email": "mikevdberge@qhse-professionals.nl",
+    "url": "https://qhse-professionals.nl"
   },
   "main": "index.js",
   "files": [
