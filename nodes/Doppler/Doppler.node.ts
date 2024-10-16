@@ -4,7 +4,7 @@ export class Doppler implements INodeType {
   description: INodeTypeDescription = {
     displayName: 'Doppler',
     name: 'doppler',
-    icon: 'file:doppler.svg',
+    icon: 'file:doppler-new.svg',
     group: ['input'],
     version: 1,
     subtitle: '={{$parameter["project"] + ": " + $parameter["config"]}}',

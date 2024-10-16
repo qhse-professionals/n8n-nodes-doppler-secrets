@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-doppler-secrets",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Enables you to use Doppler secrets in your n8n workflows.",
   "keywords": [
     "n8n-community-node-package",
@@ -8,10 +8,10 @@
     "secrets",
     "n8n"
   ],
-  "homepage": "https://github.com/qhse-professionals/n8n-nodes-doppler",
+  "homepage": "https://github.com/qhse-professionals/n8n-nodes-doppler-secrets",
   "repository": {
     "type": "git",
-    "url": "git@github.com:qhse-professionals/n8n-nodes-doppler.git"
+    "url": "git@github.com:qhse-professionals/n8n-nodes-doppler-secrets.git"
   },
   "license": "MIT",
   "author": {

@@ -28,6 +28,12 @@ This node also includes credentials that can be used with the HTTP Request node
 
 ## Version history
 
+### 0.0.4
+
+```diff
+~ Updated Doppler logo
+```
+
 ### 0.0.3
 
 ```diff
