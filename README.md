@@ -1,4 +1,4 @@
-# n8n-nodes-doppler
+# n8n-nodes-doppler-secrets
 
 > [!NOTE]
 > This version of the `n8n-nodes-doppler` n8n Community Node is my ([@4lch4][0]) fork of [the original][1].
@@ -12,7 +12,7 @@ The folks behind n8n have created [an installation guide][3] in the n8n communit
 
 ## Operations
 
-- Share Secret
+- List Config Secret
 
 ## Credentials
 
@@ -24,22 +24,15 @@ This node also includes credentials that can be used with the HTTP Request node
 
 ## TODO
 
-- [ ] Add a Compatibility section to the README.
+- [ ] 
 
 ## Version history
 
-### 0.1.1
-
-```diff
-~ Updated README to include a link to the original repo.
-+ Added a note to the README about this being a fork.
-```
-
-### 0.1.0
+### 0.0.1
 
 Initial Release
 
-- 0.1.0 - Initial Release
+- 0.0.1 - Initial Release
 
 [0]: https://4lch4.com
 [1]: https://github.com/Joffcom/n8n-nodes-doppler
