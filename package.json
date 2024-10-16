@@ -1,10 +1,11 @@
 {
-  "name": "@qhse-professionals/n8n-nodes-doppler",
+  "name": "n8n-nodes-doppler-secrets",
   "version": "0.0.1",
-  "description": "Enables you to use Doppler in your n8n workflows.",
+  "description": "Enables you to use Doppler secrets in your n8n workflows.",
   "keywords": [
     "n8n-community-node-package",
     "doppler",
+    "secrets",
     "n8n"
   ],
   "homepage": "https://github.com/qhse-professionals/n8n-nodes-doppler",
