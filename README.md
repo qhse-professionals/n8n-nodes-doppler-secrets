@@ -1,8 +1,8 @@
 # n8n-nodes-doppler-secrets
 
 > [!NOTE]
-> This version of the `n8n-nodes-doppler` n8n Community Node is my ([@4lch4][0]) fork of [the original][1].
-> Due to the sensitive nature of the data that this node handles, I have forked it to ensure that I can maintain it and keep it up to date with the latest version of n8n & Doppler. I have also added a few features that I need for my own workflows.
+> This version of the `n8n-nodes-doppler-secrets` n8n Community Node is my ([@qhse-professionals][0]) fork of [the original][1].
+> Due to the sensitive nature of the data that this node handles, I have forked it to ensure that I can maintain it and keep it up to date with the latest version of n8n & Doppler. I have also added a few features that I need for my own workflows. It also fixes one issue which prevented me to use the original.
 
 This is an n8n community node that lets you use [Doppler][2] for secret/variable management in your n8n workflows.
 
@@ -28,14 +28,20 @@ This node also includes credentials that can be used with the HTTP Request node
 
 ## Version history
 
+### 0.0.2
+
+```diff
+~ Updated README to include a link to the original repo.
+```
+
 ### 0.0.1
 
 Initial Release
 
 - 0.0.1 - Initial Release
 
-[0]: https://4lch4.com
-[1]: https://github.com/Joffcom/n8n-nodes-doppler
+[0]: https://qhse-professionals.nl
+[1]: https://github.com/4lch4/n8n-nodes-doppler
 [2]: https://doppler.com
 [3]: https://docs.n8n.io/integrations/community-nodes/installation
 [4]: https://docs.n8n.io/integrations/community-nodes
