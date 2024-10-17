@@ -8,7 +8,7 @@ This is an n8n community node that lets you use [Doppler][2] for secret/variable
 
 ## Installation
 
-The folks behind n8n have created [an installation guide][3] in the n8n community nodes documentation that shows you how to install a community node using a GUI or CLI. Simply use `@4lch4/n8n-nodes-doppler` for the package name.
+The folks behind n8n have created [an installation guide][3] in the n8n community nodes documentation that shows you how to install a community node using a GUI or CLI. Simply use `n8n-nodes-doppler-secrets` for the package name.
 
 ## Operations
 
