@@ -19,34 +19,34 @@ The folks behind n8n have created [an installation guide][3] in the n8n communit
 | Workplace User  |           		| :x:       |         |
 | Workplace Roles |           		| :x:       |         |
 | Activity Logs   |           		| :x:       |         |
-| Projects        | List      		| Yes       | 0.0.5   |
-|                 | Retrieve  		| Yes       | 0.0.5   |
+| Projects        | List      		| :white_check_mark:| 0.0.5   |
+|                 | Retrieve  		| :white_check_mark:| 0.0.5   |
 |                 | Create    		| No        |         |
 |                 | Update    		| No        |         |
-|                 | Delete    		| Yes       | 0.0.5   |
+|                 | Delete    		| :white_check_mark:| 0.0.5   |
 | Projects Roles  |           		| No        |         |
 | Projects Members|           		| No        |         |
-| Environments    | List      		| Yes       | 0.0.7   |
-|                 | Retrieve  		| Yes       | 0.0.7   |
+| Environments    | List      		| :white_check_mark:| 0.0.7   |
+|                 | Retrieve  		| :white_check_mark:| 0.0.7   |
 |                 | Create    		| No        |         |
-|                 | Delete    		| Yes       | 0.0.7   |
+|                 | Delete    		| :white_check_mark:| 0.0.7   |
 |                 | Rename    		| No        |         |
-| Configs         | List      		| Yes       | 0.0.5   |
+| Configs         | List      		| :white_check_mark:| 0.0.5   |
 |                 | Create    		| No        |         |
-|                 | Retrieve  		| Yes       | 0.0.5   |
+|                 | Retrieve  		| :white_check_mark:| 0.0.5   |
 |                 | Update    		| No        |         |
-|                 | Delete    		| Yes       | 0.0.5   |
+|                 | Delete    		| :white_check_mark:| 0.0.5   |
 |                 | Clone     		| No        |         |
-|                 | Lock      		| Yes       | 0.0.5   |
-|                 | Unlock     		| Yes       | 0.0.5   |
+|                 | Lock      		|:white_check_mark:| 0.0.5   |
+|                 | Unlock     		|:white_check_mark:| 0.0.5   |
 | Config Logs     |           		| No        |         |
 | Trusted IPs     |           		| No        |         |
-| Projects        | List      		| Yes       | 0.0.1   |
-|                 | Retrieve  		| Yes       | 0.0.5   |
-|                 | Delete    		| Yes       | 0.0.5   |
+| Projects        | List      		| :white_check_mark:| 0.0.1   |
+|                 | Retrieve  		| :white_check_mark:| 0.0.5   |
+|                 | Delete    		| :white_check_mark:| 0.0.5   |
 |                 | Update    		| No        |         |
 |                 | Download  		| No        |         |
-|                 | List Names   	| Yes       | 0.0.5   |
+|                 | List Names   	| :white_check_mark:| 0.0.5   |
 |                 | Update Notes 	| No        |         |
 | Integrations    |           		| No        |         |
 | Secret Sync	    |           		| No        |         |
