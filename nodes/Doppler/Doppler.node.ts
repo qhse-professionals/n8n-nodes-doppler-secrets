@@ -96,7 +96,7 @@ export class Doppler implements INodeType {
                 qs: {
                   project: '={{ encodeURIComponent($parameter.project) }}',
                   config: '={{ encodeURIComponent($parameter.config) }}',
-									name: '={{ encodeURIComponent($parameter.secretname) }}',
+									name: '={{ encodeURIComponent($parameter.name) }}',
                 },
               },
             },
@@ -113,7 +113,7 @@ export class Doppler implements INodeType {
                 qs: {
                   project: '={{ encodeURIComponent($parameter.project) }}',
                   config: '={{ encodeURIComponent($parameter.config) }}',
-									name: '={{ encodeURIComponent($parameter.secretname) }}',
+									name: '={{ encodeURIComponent($parameter.name) }}',
                 },
               },
             },
@@ -330,7 +330,7 @@ export class Doppler implements INodeType {
       },
       {
         displayName: 'Secret Name',
-        name: 'secretname',
+        name: 'name',
         type: 'string',
         default: '',
 				displayOptions: {
