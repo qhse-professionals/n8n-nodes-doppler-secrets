@@ -19,7 +19,12 @@ The folks behind n8n have created [an installation guide][3] in the n8n communit
 | Workplace User  | List          | :white_check_mark:| 0.0.7   |
 |                 | Retrieve  		| :white_check_mark:| 0.0.7   |
 |                 | Update    		| :x:       |         |
-| Workplace Roles |           		| :x:       |         |
+| Workplace Roles | List          | :white_check_mark:| 0.0.8   |
+|                 | Retrieve  		| :white_check_mark:| 0.0.8   |
+|                 | Create    		| :x:       |         |
+|                 | Update    		| :x:       |         |
+|                 | Delete    		| :white_check_mark:| 0.0.8   |
+|                 | List Permissions| :white_check_mark:| 0.0.8   |
 | Activity Logs   |           		| :x:       |         |
 | Projects        | List      		| :white_check_mark:| 0.0.5   |
 |                 | Retrieve  		| :white_check_mark:| 0.0.5   |
@@ -27,7 +32,7 @@ The folks behind n8n have created [an installation guide][3] in the n8n communit
 |                 | Update    		| :x:       |         |
 |                 | Delete    		| :white_check_mark:| 0.0.5   |
 | Projects Roles  |           		| :x:       |         |
-| Projects Members|           		|  :x:       |         |
+| Projects Members|           		| :x:       |         |
 | Environments    | List      		| :white_check_mark:| 0.0.7   |
 |                 | Retrieve  		| :white_check_mark:| 0.0.7   |
 |                 | Create    		| :x:       |         |
@@ -74,7 +79,7 @@ This node also includes credentials that can be used with the HTTP Request node
 ## TODO
 
 - [X] Workplace User 
-- [ ] Workplace Roles
+- [X] Workplace Roles
 - [ ] Activity Logs
 - [ ] Projects Roles
 - [ ] Projects Members
@@ -83,6 +88,12 @@ This node also includes credentials that can be used with the HTTP Request node
 - [ ] Integrations
 
 ## Version history
+
+### 0.0.8
+
+```diff
++ Added operations for Worplace Roles
+```
 
 ### 0.0.7
 

@@ -8,7 +8,7 @@ export class Doppler implements INodeType {
     icon: 'file:doppler.svg',
     group: ['input'],
     version: 1,
-    subtitle: '={{$parameter["project"] + ": " + $parameter["config"]}}',
+    subtitle: '={{$parameter["resource"] + ": " + $parameter["operation"]}}',
     description: 'Interact with the Doppler API.',
     defaults: {
       name: 'Doppler',
@@ -59,6 +59,11 @@ export class Doppler implements INodeType {
 						name: 'Workplace User',
 						value: 'workplace_user',
 					},
+					{
+						name: 'Workplace Role',
+						value: 'workplace_role',
+					},
+
 				],
 				default: 'secret',
 				required: true,
@@ -418,16 +423,75 @@ export class Doppler implements INodeType {
 					routing: {
 						request: {
 							method: 'GET',
-							url: '/v3/workplace/users',
-							qs: {
-								slug: '={{ encodeURIComponent($parameter.user_slug) }}',
-							},
+							url: '=/v3/workplace/users/{{ encodeURIComponent($parameter.user_slug) }}',
 						},
 					},
 				},
 			],
 			default: 'list',
 		},
+		{
+			displayName: 'Operation',
+			name: 'operation',
+			type: 'options',
+			noDataExpression: true,
+			required: true,
+			displayOptions: {
+				show: {
+					resource: ['workplace_role'],
+				},
+			},
+			options: [
+				{
+					name: 'List',
+					value: 'list',
+					description: 'Get all roles within a workplace',
+					action: 'List workplace roles',
+					routing: {
+						request: {
+							method: 'GET',
+							url: '/v3/workplace/roles',
+						},
+					},
+				},
+				{
+					name: 'Retrieve',
+					value: 'retrieve',
+					description: 'Get a specific role in a workplace',
+					action: 'Retrieve a workplace role',
+					routing: {
+						request: {
+							method: 'GET',
+							url: '=/v3/workplace/roles/role/{{ encodeURIComponent($parameter.role) }}',
+						},
+					},
+				},
+				{
+					name: 'Delete',
+					value: 'delete',
+					description: 'Delete a specific role in a workplace',
+					action: 'Delete a workplace role',
+					routing: {
+						request: {
+							method: 'DELETE',
+							url: '=/v3/workplace/roles/role/{{ encodeURIComponent($parameter.role) }}',
+						},
+					},
+				},
+				{
+					name: 'List Permissions',
+					value: 'listpermissions',
+					action: 'List permissions',
+					routing: {
+						request: {
+							method: 'GET',
+							url: '/v3/projects/permissions',
+						},
+					},
+				},
+			],
+			default: 'list',
+			},
       {
         displayName: 'Project',
         name: 'project',
@@ -500,7 +564,18 @@ export class Doppler implements INodeType {
 					}
 				},
       },
-
+			{
+        displayName: 'Role',
+        name: 'role',
+        type: 'string',
+        default: '',
+				displayOptions: {
+					show: {
+						resource: ['workplace_role'],
+						operation: ['retrieve','delete'],
+					}
+				},
+      },
     ],
   }
 }
