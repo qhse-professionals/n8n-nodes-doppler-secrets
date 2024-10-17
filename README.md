@@ -87,7 +87,7 @@ This node also includes credentials that can be used with the HTTP Request node
 ### 0.0.7
 
 ```diff
-+ Added operations for Environments
++ Added operations for Environments & Workplace Users
 ```
 
 ### 0.0.6
