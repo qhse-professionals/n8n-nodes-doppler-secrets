@@ -28,6 +28,11 @@ This node also includes credentials that can be used with the HTTP Request node
 
 ## Version history
 
+### 0.0.6
+
+```diff
++ Added operations for Workplace
+
 ### 0.0.5
 
 ```diff

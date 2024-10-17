@@ -291,7 +291,33 @@ export class Doppler implements INodeType {
 				],
 				default: 'list',
 			},
-
+			{
+			displayName: 'Operation',
+			name: 'operation',
+			type: 'options',
+			noDataExpression: true,
+			required: true,
+			displayOptions: {
+				show: {
+					resource: ['workplace'],
+				},
+			},
+			options: [
+				{
+					name: 'Retrieve',
+					value: 'retrieve',
+					description: 'Retrieve a workplace',
+					action: 'Retrieve a workplace',
+					routing: {
+						request: {
+							method: 'GET',
+							url: '/v3/workplace',
+						},
+					},
+				},
+			],
+			default: 'retrieve',
+		},
       {
         displayName: 'Project',
         name: 'project',
