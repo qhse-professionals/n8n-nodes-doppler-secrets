@@ -335,7 +335,7 @@ export class Doppler implements INodeType {
         default: '',
 				displayOptions: {
 					show: {
-						resource: ['secrets'],
+						resource: ['secret'],
 						operation: ['retrieve','delete'],
 					}
 				},
