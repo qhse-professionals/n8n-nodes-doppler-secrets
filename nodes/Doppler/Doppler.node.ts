@@ -55,6 +55,10 @@ export class Doppler implements INodeType {
 						name: 'Workplace',
 						value: 'workplace',
 					},
+					{
+						name: 'Workplace User',
+						value: 'workplace_user',
+					},
 				],
 				default: 'secret',
 				required: true,
@@ -355,7 +359,6 @@ export class Doppler implements INodeType {
 				],
 				default: 'list',
 			},
-
 			{
 			displayName: 'Operation',
 			name: 'operation',
@@ -382,6 +385,48 @@ export class Doppler implements INodeType {
 				},
 			],
 			default: 'retrieve',
+		},
+		{
+			displayName: 'Operation',
+			name: 'operation',
+			type: 'options',
+			noDataExpression: true,
+			required: true,
+			displayOptions: {
+				show: {
+					resource: ['workplace_user'],
+				},
+			},
+			options: [
+				{
+					name: 'List',
+					value: 'list',
+					description: 'Get all users within a workplace',
+					action: 'List workplace users',
+					routing: {
+						request: {
+							method: 'GET',
+							url: '/v3/workplace/users',
+						},
+					},
+				},
+				{
+					name: 'Retrieve',
+					value: 'retrieve',
+					description: 'Get a specific user in a workplace',
+					action: 'Retrieve a workplace user',
+					routing: {
+						request: {
+							method: 'GET',
+							url: '/v3/workplace/users',
+							qs: {
+								slug: '={{ encodeURIComponent($parameter.user_slug) }}',
+							},
+						},
+					},
+				},
+			],
+			default: 'list',
 		},
       {
         displayName: 'Project',
@@ -443,6 +488,19 @@ export class Doppler implements INodeType {
 					}
 				},
       },
+			{
+        displayName: 'The Slug of the Workplace User',
+        name: 'user_slug',
+        type: 'string',
+        default: '',
+				displayOptions: {
+					show: {
+						resource: ['workplace_user'],
+						operation: ['retrieve'],
+					}
+				},
+      },
+
     ],
   }
 }

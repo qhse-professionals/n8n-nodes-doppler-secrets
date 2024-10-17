@@ -16,7 +16,9 @@ The folks behind n8n have created [an installation guide][3] in the n8n communit
 |-----------------|---------------|-----------|---------|
 | Workplace       | Retrieve  		| :white_check_mark:| 0.0.6   |
 |                 | Update    		| :x:       |         |
-| Workplace User  |           		| :x:       |         |
+| Workplace User  | List          | :white_check_mark:| 0.0.7   |
+|                 | Retrieve  		| :white_check_mark:| 0.0.7   |
+|                 | Update    		| :x:       |         |
 | Workplace Roles |           		| :x:       |         |
 | Activity Logs   |           		| :x:       |         |
 | Projects        | List      		| :white_check_mark:| 0.0.5   |
@@ -71,7 +73,7 @@ This node also includes credentials that can be used with the HTTP Request node
 
 ## TODO
 
-- [ ] Workplace User 
+- [X] Workplace User 
 - [ ] Workplace Roles
 - [ ] Activity Logs
 - [ ] Projects Roles
