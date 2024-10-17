@@ -28,6 +28,14 @@ This node also includes credentials that can be used with the HTTP Request node
 
 ## Version history
 
+### 0.0.5
+
+```diff
++ Added operations for Secrets
++ Added operations for Configs
++ Added operations for Projects
+```
+
 ### 0.0.4
 
 ```diff
