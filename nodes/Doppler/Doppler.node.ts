@@ -5,7 +5,7 @@ export class Doppler implements INodeType {
   description: INodeTypeDescription = {
     displayName: 'Doppler',
     name: 'doppler',
-    icon: 'file:doppler-new.svg',
+    icon: 'file:doppler.svg',
     group: ['input'],
     version: 1,
     subtitle: '={{$parameter["project"] + ": " + $parameter["config"]}}',
@@ -23,7 +23,10 @@ export class Doppler implements INodeType {
     ],
     requestDefaults: {
       baseURL: 'https://api.doppler.com',
-      headers: {},
+			headers: {
+				Accept: 'application/json',
+				'Content-Type': 'application/json',
+			},
     },
     properties: [
 			{
@@ -292,6 +295,68 @@ export class Doppler implements INodeType {
 				default: 'list',
 			},
 			{
+				displayName: 'Operation',
+				name: 'operation',
+				type: 'options',
+				noDataExpression: true,
+				required: true,
+				displayOptions: {
+					show: {
+						resource: ['environment'],
+					},
+				},
+				options: [
+					{
+						name: 'List',
+						value: 'list',
+						description: 'List all environments',
+						action: 'List all environments',
+            routing: {
+              request: {
+                method: 'GET',
+                url: '/v3/environments/',
+                qs: {
+                  project: '={{ encodeURIComponent($parameter.project) }}',
+                },
+              },
+            },
+					},
+					{
+						name: 'Retrieve',
+						value: 'retrieve',
+						description: 'Retrieve an environment',
+						action: 'Retrieve an environment',
+            routing: {
+              request: {
+                method: 'GET',
+                url: '/v3/environments/environment',
+                qs: {
+                  project: '={{ encodeURIComponent($parameter.project) }}',
+									environment: '={{ encodeURIComponent($parameter.environment) }}',
+                },
+              },
+            },
+					},
+					{
+						name: 'Delete',
+						value: 'delete',
+						description: 'Delete an environment',
+						action: 'Delete an environment',
+            routing: {
+              request: {
+                method: 'DELETE',
+                url: '/v3/environments/environment',
+                qs: {
+                  project: '={{ encodeURIComponent($parameter.project) }}',
+                },
+              },
+            },
+					},
+				],
+				default: 'list',
+			},
+
+			{
 			displayName: 'Operation',
 			name: 'operation',
 			type: 'options',
@@ -325,7 +390,7 @@ export class Doppler implements INodeType {
 				default: '',
 				displayOptions: {
 					show: {
-						resource: ['secret','config','project'],
+						resource: ['secret','config','project','environment'],
 						operation: ['list','retrieve','delete','listnames','lock','unlock'],
 					}
 				},
@@ -362,6 +427,18 @@ export class Doppler implements INodeType {
 				displayOptions: {
 					show: {
 						resource: ['secret'],
+						operation: ['retrieve','delete'],
+					}
+				},
+      },
+			{
+        displayName: 'Environment',
+        name: 'environment',
+        type: 'string',
+        default: '',
+				displayOptions: {
+					show: {
+						resource: ['environment'],
 						operation: ['retrieve','delete'],
 					}
 				},

@@ -1,0 +1,18 @@
+{
+	"node": "n8n-nodes-doppler-secrets",
+	"nodeVersion": "1.0.0",
+	"codexVersion": "1.0",
+	"categories": ["Development", "Developer Tools"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://docs.doppler.com/reference/api#authentication"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://docs.doppler.com/reference/api"
+			}
+		]
+	}
+}

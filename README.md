@@ -12,7 +12,22 @@ The folks behind n8n have created [an installation guide][3] in the n8n communit
 
 ## Operations
 
-- List Config Secret
+| Resource        | Operation | Supported | Version |   |
+|-----------------|-----------|-----------|---------|---|
+| Workplace       | Retrieve  | Yes       | 0.0.6   |   |
+|                 | Update    | No        |         |   |
+| Workplace User  |           | No        |         |   |
+| Workplace Roles |           | No        |         |   |
+| Activity Logs   |           | No        |         |   |
+| Projects        | List      | Yes       | 0.0.5   |   |
+|                 | Create    | No        |         |   |
+| Projects Roles  |           | No        |         |   |
+| Projects Members|           | No        |         |   |
+| Environments    | List      | Yes       | 0.0.7   |   |
+|                 | Retrieve  | Yes       | 0.0.7   |   |
+|                 | Create    | No        |         |   |
+|                 | Delete    | Yes       | 0.0.7   |   |
+|                 | Rename    | No        |         |   |
 
 ## Credentials
 
