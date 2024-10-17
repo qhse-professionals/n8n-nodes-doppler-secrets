@@ -89,6 +89,12 @@ This node also includes credentials that can be used with the HTTP Request node
 
 ## Version history
 
+### 0.0.9
+
+```diff
+fix(creds): 🐛 add icon property to credentials
+```
+
 ### 0.0.8
 
 ```diff
