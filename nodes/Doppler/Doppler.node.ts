@@ -296,7 +296,7 @@ export class Doppler implements INodeType {
         displayName: 'Project',
         name: 'project',
         type: 'string',
-				default: 'qhse-infra',
+				default: '',
 				displayOptions: {
 					show: {
 						resource: ['secret','config','project'],
@@ -308,7 +308,7 @@ export class Doppler implements INodeType {
         displayName: 'Config',
         name: 'config',
         type: 'string',
-				default: 'prd',
+				default: '',
 				displayOptions: {
 					show: {
 						resource: ['secret'],
@@ -320,7 +320,7 @@ export class Doppler implements INodeType {
         displayName: 'Config',
         name: 'configs',
         type: 'string',
-				default: 'prd',
+				default: '',
 				displayOptions: {
 					show: {
 						resource: ['config'],
