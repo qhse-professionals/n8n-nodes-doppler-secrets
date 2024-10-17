@@ -12,22 +12,54 @@ The folks behind n8n have created [an installation guide][3] in the n8n communit
 
 ## Operations
 
-| Resource        | Operation | Supported | Version |   |
-|-----------------|-----------|-----------|---------|---|
-| Workplace       | Retrieve  | Yes       | 0.0.6   |   |
-|                 | Update    | No        |         |   |
-| Workplace User  |           | No        |         |   |
-| Workplace Roles |           | No        |         |   |
-| Activity Logs   |           | No        |         |   |
-| Projects        | List      | Yes       | 0.0.5   |   |
-|                 | Create    | No        |         |   |
-| Projects Roles  |           | No        |         |   |
-| Projects Members|           | No        |         |   |
-| Environments    | List      | Yes       | 0.0.7   |   |
-|                 | Retrieve  | Yes       | 0.0.7   |   |
-|                 | Create    | No        |         |   |
-|                 | Delete    | Yes       | 0.0.7   |   |
-|                 | Rename    | No        |         |   |
+| Resource        | Operation 		| Supported | Version |
+|-----------------|---------------|-----------|---------|
+| Workplace       | Retrieve  		| :white_check_mark:| 0.0.6   |
+|                 | Update    		| :x:       |         |
+| Workplace User  |           		| :x:       |         |
+| Workplace Roles |           		| :x:       |         |
+| Activity Logs   |           		| :x:       |         |
+| Projects        | List      		| Yes       | 0.0.5   |
+|                 | Retrieve  		| Yes       | 0.0.5   |
+|                 | Create    		| No        |         |
+|                 | Update    		| No        |         |
+|                 | Delete    		| Yes       | 0.0.5   |
+| Projects Roles  |           		| No        |         |
+| Projects Members|           		| No        |         |
+| Environments    | List      		| Yes       | 0.0.7   |
+|                 | Retrieve  		| Yes       | 0.0.7   |
+|                 | Create    		| No        |         |
+|                 | Delete    		| Yes       | 0.0.7   |
+|                 | Rename    		| No        |         |
+| Configs         | List      		| Yes       | 0.0.5   |
+|                 | Create    		| No        |         |
+|                 | Retrieve  		| Yes       | 0.0.5   |
+|                 | Update    		| No        |         |
+|                 | Delete    		| Yes       | 0.0.5   |
+|                 | Clone     		| No        |         |
+|                 | Lock      		| Yes       | 0.0.5   |
+|                 | Unlock     		| Yes       | 0.0.5   |
+| Config Logs     |           		| No        |         |
+| Trusted IPs     |           		| No        |         |
+| Projects        | List      		| Yes       | 0.0.1   |
+|                 | Retrieve  		| Yes       | 0.0.5   |
+|                 | Delete    		| Yes       | 0.0.5   |
+|                 | Update    		| No        |         |
+|                 | Download  		| No        |         |
+|                 | List Names   	| Yes       | 0.0.5   |
+|                 | Update Notes 	| No        |         |
+| Integrations    |           		| No        |         |
+| Secret Sync	    |           		| No        |         |
+| Dynamic Secrets |           		| No        |         |
+| Service Tokens  |           		| No        |         |
+| Invites			    |           		| No        |         |
+| Groups			    |           		| No        |         |
+| Service Account |           		| No        |         |
+| Service Account Tokens |     		| No        |         |
+| Auth				    |           		| No        |         |
+| Share				    |           		| No        |         |
+| Audit API		    |           		| No        |         |
+| Webhooks		    |           		| No        |         |
 
 ## Credentials
 
@@ -42,6 +74,12 @@ This node also includes credentials that can be used with the HTTP Request node
 - [ ] 
 
 ## Version history
+
+### 0.0.7
+
+```diff
++ Added operations for Environments
+```
 
 ### 0.0.6
 
