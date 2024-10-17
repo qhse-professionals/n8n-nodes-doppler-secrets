@@ -21,45 +21,45 @@ The folks behind n8n have created [an installation guide][3] in the n8n communit
 | Activity Logs   |           		| :x:       |         |
 | Projects        | List      		| :white_check_mark:| 0.0.5   |
 |                 | Retrieve  		| :white_check_mark:| 0.0.5   |
-|                 | Create    		| No        |         |
-|                 | Update    		| No        |         |
+|                 | Create    		| :x:       |         |
+|                 | Update    		| :x:       |         |
 |                 | Delete    		| :white_check_mark:| 0.0.5   |
-| Projects Roles  |           		| No        |         |
-| Projects Members|           		| No        |         |
+| Projects Roles  |           		| :x:       |         |
+| Projects Members|           		|  :x:       |         |
 | Environments    | List      		| :white_check_mark:| 0.0.7   |
 |                 | Retrieve  		| :white_check_mark:| 0.0.7   |
-|                 | Create    		| No        |         |
+|                 | Create    		| :x:       |         |
 |                 | Delete    		| :white_check_mark:| 0.0.7   |
-|                 | Rename    		| No        |         |
+|                 | Rename    		| :x:       |         |
 | Configs         | List      		| :white_check_mark:| 0.0.5   |
-|                 | Create    		| No        |         |
+|                 | Create    		| :x:       |         |
 |                 | Retrieve  		| :white_check_mark:| 0.0.5   |
-|                 | Update    		| No        |         |
+|                 | Update    		| :x:       |         |
 |                 | Delete    		| :white_check_mark:| 0.0.5   |
-|                 | Clone     		| No        |         |
+|                 | Clone     		| :x:       |         |
 |                 | Lock      		|:white_check_mark:| 0.0.5   |
 |                 | Unlock     		|:white_check_mark:| 0.0.5   |
-| Config Logs     |           		| No        |         |
-| Trusted IPs     |           		| No        |         |
+| Config Logs     |           		| :x:       |         |
+| Trusted IPs     |           		| :x:       |         |
 | Projects        | List      		| :white_check_mark:| 0.0.1   |
 |                 | Retrieve  		| :white_check_mark:| 0.0.5   |
 |                 | Delete    		| :white_check_mark:| 0.0.5   |
-|                 | Update    		| No        |         |
-|                 | Download  		| No        |         |
+|                 | Update    		| :x:       |         |
+|                 | Download  		| :x:       |         |
 |                 | List Names   	| :white_check_mark:| 0.0.5   |
-|                 | Update Notes 	| No        |         |
-| Integrations    |           		| No        |         |
-| Secret Sync	    |           		| No        |         |
-| Dynamic Secrets |           		| No        |         |
-| Service Tokens  |           		| No        |         |
-| Invites			    |           		| No        |         |
-| Groups			    |           		| No        |         |
-| Service Account |           		| No        |         |
-| Service Account Tokens |     		| No        |         |
-| Auth				    |           		| No        |         |
-| Share				    |           		| No        |         |
-| Audit API		    |           		| No        |         |
-| Webhooks		    |           		| No        |         |
+|                 | Update Notes 	| :x:       |         |
+| Integrations    |           		| :x:       |         |
+| Secret Sync	    |           		| :x:       |         |
+| Dynamic Secrets |           		| :x:       |         |
+| Service Tokens  |           		| :x:       |         |
+| Invites			    |           		| :x:       |         |
+| Groups			    |           		| :x:       |         |
+| Service Account |           		| :x:       |         |
+| Service Account Tokens |     		| :x:       |         |
+| Auth				    |           		| :x:       |         |
+| Share				    |           		| :x:       |         |
+| Audit API		    |           		| :x:       |         |
+| Webhooks		    |           		| :x:       |         |
 
 ## Credentials
 
