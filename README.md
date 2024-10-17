@@ -71,7 +71,14 @@ This node also includes credentials that can be used with the HTTP Request node
 
 ## TODO
 
-- [ ] 
+- [ ] Workplace User 
+- [ ] Workplace Roles
+- [ ] Activity Logs
+- [ ] Projects Roles
+- [ ] Projects Members
+- [ ] Config Logs
+- [ ] Trusted IPs
+- [ ] Integrations
 
 ## Version history
 
