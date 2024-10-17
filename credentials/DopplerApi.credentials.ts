@@ -8,7 +8,7 @@ import {
 export class DopplerApi implements ICredentialType {
   name = 'dopplerApi'
   displayName = 'Doppler API'
-	icon?: Icon | undefined = 'file:../nodes/Doppler/doppler.svg';
+	icon = { light: 'file:../nodes/Doppler/doppler.svg', dark: 'file:../nodes/Doppler/doppler.svg' } as const;
   properties: INodeProperties[] = [
     {
       displayName: 'API Token',
