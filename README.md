@@ -38,7 +38,11 @@ The folks behind n8n have created [an installation guide][3] in the n8n communit
 |                 | Update    		| :x:       |         |
 |                 | Delete    		| :white_check_mark:| 0.1.0   |
 |                 | List Permissions| :white_check_mark:| 0.1.0   |
-| Projects Members|           		| :x:       |         |
+| Projects Members| List       		| :white_check_mark:| 0.1.1   |
+|                 | Retrieve  		| :white_check_mark:| 0.1.1   |
+|                 | Add	       		| :x:       |         |
+|                 | Update    		| :x:       |         |
+|                 | Delete    		| :white_check_mark:| 0.1.1   |
 | Environments    | List      		| :white_check_mark:| 0.0.7   |
 |                 | Retrieve  		| :white_check_mark:| 0.0.7   |
 |                 | Create    		| :x:       |         |
