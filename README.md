@@ -32,7 +32,12 @@ The folks behind n8n have created [an installation guide][3] in the n8n communit
 |                 | Create    		| :x:       |         |
 |                 | Update    		| :x:       |         |
 |                 | Delete    		| :white_check_mark:| 0.0.5   |
-| Projects Roles  |           		| :x:       |         |
+| Projects Roles  | List       		| :white_check_mark:| 0.1.0   |
+|                 | Retrieve  		| :white_check_mark:| 0.1.0   |
+|                 | Create    		| :x:       |         |
+|                 | Update    		| :x:       |         |
+|                 | Delete    		| :white_check_mark:| 0.1.0   |
+|                 | List Permissions| :white_check_mark:| 0.1.0   |
 | Projects Members|           		| :x:       |         |
 | Environments    | List      		| :white_check_mark:| 0.0.7   |
 |                 | Retrieve  		| :white_check_mark:| 0.0.7   |
@@ -81,8 +86,8 @@ This node also includes credentials that can be used with the HTTP Request node
 Operations
 - [X] Workplace User 
 - [X] Workplace Roles
-- [ ] Activity Logs
-- [ ] Projects Roles
+- [X] Activity Logs
+- [X] Projects Roles
 - [ ] Projects Members
 - [ ] Config Logs
 - [ ] Trusted IPs
@@ -90,6 +95,12 @@ Operations
 - [ ] Add support for pagination
 
 ## Version history
+
+### 0.1.0
+
+```diff
++ Added operations for Project Roles
+```
 
 ### 0.0.9
 

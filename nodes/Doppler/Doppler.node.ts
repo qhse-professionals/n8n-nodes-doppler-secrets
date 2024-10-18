@@ -52,6 +52,10 @@ export class Doppler implements INodeType {
 						value: 'project',
 					},
 					{
+						name: 'Project Role',
+						value: 'project_role',
+					},
+					{
 						name: 'Workplace',
 						value: 'workplace',
 					},
@@ -306,6 +310,73 @@ export class Doppler implements INodeType {
 				],
 				default: 'list',
 			},
+			{
+				displayName: 'Operation',
+				name: 'operation',
+				type: 'options',
+				noDataExpression: true,
+				required: true,
+				displayOptions: {
+					show: {
+						resource: ['project_role'],
+					},
+				},
+				options: [
+					{
+						name: 'List',
+						value: 'list',
+						description: 'List all project roles',
+						action: 'List all project roles',
+            routing: {
+              request: {
+                method: 'GET',
+                url: '/v3/projects/roles/',
+                qs: {
+                  per_page: '=100',
+                },
+              },
+            },
+					},
+					{
+						name: 'Retrieve',
+						value: 'retrieve',
+						description: 'Retrieve a project',
+						action: 'Retrieve a project',
+            routing: {
+              request: {
+                method: 'GET',
+                url: '=/v3/projects/roles/role/{{ encodeURIComponent($parameter.role) }}',
+              },
+            },
+					},
+					{
+						name: 'Delete',
+						value: 'delete',
+						description: 'Delete a project',
+						action: 'Delete a project',
+            routing: {
+              request: {
+                method: 'DELETE',
+                url: '=/v3/projects/roles/role/{{ encodeURIComponent($parameter.role) }}',
+              },
+            },
+					},
+					{
+						name: 'List Permissions',
+						value: 'list_permissions',
+						action: 'List permissions',
+            routing: {
+              request: {
+                method: 'GET',
+                url: '/v3/projects/permissions',
+              },
+            },
+					},
+
+				],
+				default: 'list',
+			},
+
 			{
 				displayName: 'Operation',
 				name: 'operation',
@@ -620,7 +691,7 @@ export class Doppler implements INodeType {
         default: '',
 				displayOptions: {
 					show: {
-						resource: ['workplace_role'],
+						resource: ['workplace_role','project_role'],
 						operation: ['retrieve','delete'],
 					}
 				},
@@ -637,7 +708,6 @@ export class Doppler implements INodeType {
 					}
 				},
       },
-
     ],
   }
 }
