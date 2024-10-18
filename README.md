@@ -88,13 +88,19 @@ Operations
 - [X] Workplace Roles
 - [X] Activity Logs
 - [X] Projects Roles
-- [ ] Projects Members
+- [X] Projects Members
 - [ ] Config Logs
 - [ ] Trusted IPs
 - [ ] Integrations
 - [ ] Add support for pagination
 
 ## Version history
+
+### 0.1.1
+
+```diff
++ Added operations for Project Members
+```
 
 ### 0.1.0
 

@@ -56,6 +56,10 @@ export class Doppler implements INodeType {
 						value: 'project_role',
 					},
 					{
+						name: 'Project Member',
+						value: 'project_member',
+					},
+					{
 						name: 'Workplace',
 						value: 'workplace',
 					},
@@ -332,7 +336,7 @@ export class Doppler implements INodeType {
                 method: 'GET',
                 url: '/v3/projects/roles/',
                 qs: {
-                  per_page: '=100',
+                  per_page: '100',
                 },
               },
             },
@@ -340,7 +344,7 @@ export class Doppler implements INodeType {
 					{
 						name: 'Retrieve',
 						value: 'retrieve',
-						description: 'Retrieve a project',
+						description: 'Retrieve a project role',
 						action: 'Retrieve a project',
             routing: {
               request: {
@@ -352,7 +356,7 @@ export class Doppler implements INodeType {
 					{
 						name: 'Delete',
 						value: 'delete',
-						description: 'Delete a project',
+						description: 'Delete a project role',
 						action: 'Delete a project',
             routing: {
               request: {
@@ -373,6 +377,67 @@ export class Doppler implements INodeType {
             },
 					},
 
+				],
+				default: 'list',
+			},
+			{
+				displayName: 'Operation',
+				name: 'operation',
+				type: 'options',
+				noDataExpression: true,
+				required: true,
+				displayOptions: {
+					show: {
+						resource: ['project_member'],
+					},
+				},
+				options: [
+					{
+						name: 'List',
+						value: 'list',
+						description: 'List all project members',
+						action: 'List all project members',
+            routing: {
+              request: {
+                method: 'GET',
+                url: '/v3/projects/project/members/',
+                qs: {
+                  project: '={{ encodeURIComponent($parameter.project) }}',
+                  per_page: '100',
+                },
+              },
+            },
+					},
+					{
+						name: 'Retrieve',
+						value: 'retrieve',
+						description: 'Retrieve a project member',
+						action: 'Retrieve a project member',
+            routing: {
+              request: {
+                method: 'GET',
+                url: '=/v3/projects/project/members/member/{{ encodeURIComponent($parameter.type) }}/{{ encodeURIComponent($parameter.user_slug) }}',
+                qs: {
+                  project: '={{ encodeURIComponent($parameter.project) }}',
+                },
+              },
+            },
+					},
+					{
+						name: 'Delete',
+						value: 'delete',
+						description: 'Delete a project member',
+						action: 'Delete a project member',
+            routing: {
+              request: {
+                method: 'DELETE',
+                url: '=/v3/projects/project/members/member/{{ encodeURIComponent($parameter.type) }}/{{ encodeURIComponent($parameter.user_slug) }}',
+                qs: {
+                  project: '={{ encodeURIComponent($parameter.project) }}',
+                },
+              },
+            },
+					},
 				],
 				default: 'list',
 			},
@@ -619,7 +684,7 @@ export class Doppler implements INodeType {
 				default: '',
 				displayOptions: {
 					show: {
-						resource: ['secret','config','project','environment'],
+						resource: ['secret','config','project','project_member','environment'],
 						operation: ['list','retrieve','delete','listnames','lock','unlock'],
 					}
 				},
@@ -673,13 +738,25 @@ export class Doppler implements INodeType {
 				},
       },
 			{
-        displayName: 'The Slug of the Workplace User',
+        displayName: 'The Slug of the User',
         name: 'user_slug',
         type: 'string',
         default: '',
 				displayOptions: {
 					show: {
-						resource: ['workplace_user'],
+						resource: ['workplace_user','project_member'],
+						operation: ['retrieve'],
+					}
+				},
+      },
+			{
+        displayName: 'Type of Member',
+        name: 'type',
+        type: 'string',
+        default: '',
+				displayOptions: {
+					show: {
+						resource: ['project_member'],
 						operation: ['retrieve'],
 					}
 				},
