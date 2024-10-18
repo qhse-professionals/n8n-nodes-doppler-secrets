@@ -25,7 +25,8 @@ The folks behind n8n have created [an installation guide][3] in the n8n communit
 |                 | Update    		| :x:       |         |
 |                 | Delete    		| :white_check_mark:| 0.0.8   |
 |                 | List Permissions| :white_check_mark:| 0.0.8   |
-| Activity Logs   |           		| :x:       |         |
+| Activity Logs   | List       		| :white_check_mark:| 0.0.9   |
+|                 | Retrieve  		| :white_check_mark:| 0.0.9   |
 | Projects        | List      		| :white_check_mark:| 0.0.5   |
 |                 | Retrieve  		| :white_check_mark:| 0.0.5   |
 |                 | Create    		| :x:       |         |
@@ -77,7 +78,7 @@ This node also includes credentials that can be used with the HTTP Request node
 - [n8n community nodes documentation][4]
 
 ## TODO
-
+Operations
 - [X] Workplace User 
 - [X] Workplace Roles
 - [ ] Activity Logs
@@ -86,13 +87,15 @@ This node also includes credentials that can be used with the HTTP Request node
 - [ ] Config Logs
 - [ ] Trusted IPs
 - [ ] Integrations
+- [ ] Add support for pagination
 
 ## Version history
 
 ### 0.0.9
 
 ```diff
-fix(creds): 🐛 add icon property to credentials
++ fix(creds): 🐛 add icon property to credentials
++ Added operations for Activity logs
 ```
 
 ### 0.0.8

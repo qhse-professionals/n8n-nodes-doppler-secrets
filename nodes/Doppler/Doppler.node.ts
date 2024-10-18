@@ -63,7 +63,10 @@ export class Doppler implements INodeType {
 						name: 'Workplace Role',
 						value: 'workplace_role',
 					},
-
+					{
+						name: 'Activity Log',
+						value: 'activity_log',
+					},
 				],
 				default: 'secret',
 				required: true,
@@ -492,6 +495,52 @@ export class Doppler implements INodeType {
 			],
 			default: 'list',
 			},
+			{
+				displayName: 'Operation',
+				name: 'operation',
+				type: 'options',
+				noDataExpression: true,
+				required: true,
+				displayOptions: {
+					show: {
+						resource: ['activity_log'],
+					},
+				},
+				options: [
+					{
+						name: 'List',
+						value: 'list',
+						description: 'List activity logs',
+						action: 'List activity logs',
+						routing: {
+							request: {
+								method: 'GET',
+								url: '/v3/logs',
+								qs: {
+									per_page: '250'
+								},
+							},
+						},
+					},
+					{
+						name: 'Retrieve',
+						value: 'retrieve',
+						description: 'Get a specific activity log',
+						action: 'Retrieve a activity log',
+            routing: {
+              request: {
+                method: 'GET',
+                url: '/v3/logs/log',
+                qs: {
+                  log: '={{ encodeURIComponent($parameter.log) }}',
+                },
+              },
+            },
+
+					},
+				],
+				default: 'list',
+				},
       {
         displayName: 'Project',
         name: 'project',
@@ -576,6 +625,19 @@ export class Doppler implements INodeType {
 					}
 				},
       },
+			{
+        displayName: 'Log ID',
+        name: 'log',
+        type: 'string',
+        default: '',
+				displayOptions: {
+					show: {
+						resource: ['activity_log'],
+						operation: ['retrieve'],
+					}
+				},
+      },
+
     ],
   }
 }
