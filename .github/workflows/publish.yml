@@ -3,7 +3,7 @@ on:
   release:
     types: [published]
 jobs:
-  publish:
+  build:
     name: 📤️ Publish Package
     runs-on: ubuntu-latest    
     permissions:
