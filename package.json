@@ -19,6 +19,11 @@
     "email": "mikevdberge@qhse-professionals.nl",
     "url": "https://qhse-professionals.nl"
   },
+	"engines": {
+		"node": ">=18.10",
+		"pnpm": ">=9.1"
+	},
+	"packageManager": "pnpm@9.12.1",
   "main": "index.js",
   "files": [
     "dist"
