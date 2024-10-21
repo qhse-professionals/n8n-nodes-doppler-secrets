@@ -1,3 +1,5 @@
+![Banner Image](./assets/doppler_banner.png)
+
 # n8n-nodes-doppler-secrets
 
 > [!NOTE]
