@@ -44,6 +44,10 @@ export class Doppler implements INodeType {
 						value: 'config',
 					},
 					{
+						name: 'Config Log',
+						value: 'config_log',
+					},
+					{
 						name: 'Environment',
 						value: 'environment',
 					},
@@ -247,6 +251,55 @@ export class Doppler implements INodeType {
                 qs: {
                   project: '={{ encodeURIComponent($parameter.project) }}',
                   config: '={{ encodeURIComponent($parameter.configs) }}',
+                },
+              },
+            },
+					},
+				],
+				default: 'list',
+			},
+			{
+				displayName: 'Operation',
+				name: 'operation',
+				type: 'options',
+				noDataExpression: true,
+				required: true,
+				displayOptions: {
+					show: {
+						resource: ['config_log'],
+					},
+				},
+				options: [
+					{
+						name: 'List',
+						value: 'list',
+						description: 'List all configuration logs',
+						action: 'List all config logs',
+            routing: {
+              request: {
+                method: 'GET',
+                url: '/v3/configs/config/logs	',
+                qs: {
+                  project: '={{ encodeURIComponent($parameter.project) }}',
+                  config: '={{ encodeURIComponent($parameter.config) }}',
+									per_page: '100',
+                },
+              },
+            },
+					},
+					{
+						name: 'Retrieve',
+						value: 'retrieve',
+						description: 'Retrieve a configuration log',
+						action: 'Retrieve a config log',
+            routing: {
+              request: {
+                method: 'GET',
+                url: '/v3/configs/config/logs/log',
+                qs: {
+                  project: '={{ encodeURIComponent($parameter.project) }}',
+                  config: '={{ encodeURIComponent($parameter.config) }}',
+									log: '={{ encodeURIComponent($parameter.log) }}',
                 },
               },
             },
@@ -684,7 +737,7 @@ export class Doppler implements INodeType {
 				default: '',
 				displayOptions: {
 					show: {
-						resource: ['secret','config','project','project_member','environment'],
+						resource: ['secret','config','config_log','project','project_member','environment'],
 						operation: ['list','retrieve','delete','listnames','lock','unlock'],
 					}
 				},
@@ -696,7 +749,7 @@ export class Doppler implements INodeType {
 				default: '',
 				displayOptions: {
 					show: {
-						resource: ['secret'],
+						resource: ['secret','config_log'],
 						operation: ['list','retrieve','delete','listnames'],
 					}
 				},
@@ -780,7 +833,7 @@ export class Doppler implements INodeType {
         default: '',
 				displayOptions: {
 					show: {
-						resource: ['activity_log'],
+						resource: ['activity_log','config_log'],
 						operation: ['retrieve'],
 					}
 				},

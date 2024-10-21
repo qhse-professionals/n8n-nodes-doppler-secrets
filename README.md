@@ -54,9 +54,11 @@ The folks behind n8n have created [an installation guide][3] in the n8n communit
 |                 | Update    		| :x:       |         |
 |                 | Delete    		| :white_check_mark:| 0.0.5   |
 |                 | Clone     		| :x:       |         |
-|                 | Lock      		|:white_check_mark:| 0.0.5   |
-|                 | Unlock     		|:white_check_mark:| 0.0.5   |
-| Config Logs     |           		| :x:       |         |
+|                 | Lock      		| :white_check_mark:| 0.0.5   |
+|                 | Unlock     		| :white_check_mark:| 0.0.5   |
+| Config Logs     | List          | :white_check_mark:| 0.1.2   |
+|                 | Retrieve  		| :white_check_mark:| 0.1.2   |
+|                 | Rollback  		| :x:       |         |
 | Trusted IPs     |           		| :x:       |         |
 | Projects        | List      		| :white_check_mark:| 0.0.1   |
 |                 | Retrieve  		| :white_check_mark:| 0.0.5   |
@@ -93,12 +95,18 @@ Operations
 - [X] Activity Logs
 - [X] Projects Roles
 - [X] Projects Members
-- [ ] Config Logs
+- [X] Config Logs
 - [ ] Trusted IPs
 - [ ] Integrations
 - [ ] Add support for pagination
 
 ## Version history
+
+### 0.1.2
+
+```diff
++ Added operations for Config Logs
+```
 
 ### 0.1.1
 
