@@ -1,4 +1,4 @@
-![Banner Image](./assets/doppler_banner.png)
+![Banner Image](./assets/doppler_banner.png)(https://doppler.com)
 
 # n8n-nodes-doppler-secrets
 
