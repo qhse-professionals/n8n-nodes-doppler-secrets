@@ -79,6 +79,11 @@ export class Doppler implements INodeType {
 						name: 'Activity Log',
 						value: 'activity_log',
 					},
+					{
+						name: 'Trusted IP',
+						value: 'trusted_ip',
+					},
+
 				],
 				default: 'secret',
 				required: true,
@@ -706,7 +711,7 @@ export class Doppler implements INodeType {
 								method: 'GET',
 								url: '/v3/logs',
 								qs: {
-									per_page: '250'
+									per_page: '100'
 								},
 							},
 						},
@@ -725,11 +730,41 @@ export class Doppler implements INodeType {
                 },
               },
             },
-
 					},
 				],
 				default: 'list',
 				},
+				{
+					displayName: 'Operation',
+					name: 'operation',
+					type: 'options',
+					noDataExpression: true,
+					required: true,
+					displayOptions: {
+						show: {
+							resource: ['trusted_ip'],
+						},
+					},
+					options: [
+						{
+							name: 'List',
+							value: 'list',
+							description: 'List trusted IPs',
+							action: 'List trusted ips',
+							routing: {
+								request: {
+									method: 'GET',
+									url: '/v3/configs/config/trusted_ips',
+									qs: {
+										project: '={{ encodeURIComponent($parameter.project) }}',
+										config: '={{ encodeURIComponent($parameter.config) }}',
+									},
+								},
+							},
+						},
+					],
+					default: 'list',
+					},
       {
         displayName: 'Project',
         name: 'project',
@@ -737,7 +772,7 @@ export class Doppler implements INodeType {
 				default: '',
 				displayOptions: {
 					show: {
-						resource: ['secret','config','config_log','project','project_member','environment'],
+						resource: ['secret','config','config_log','trusted_ip','project','project_member','environment'],
 						operation: ['list','retrieve','delete','listnames','lock','unlock'],
 					}
 				},
@@ -749,7 +784,7 @@ export class Doppler implements INodeType {
 				default: '',
 				displayOptions: {
 					show: {
-						resource: ['secret','config_log'],
+						resource: ['secret','config_log','trusted_ip'],
 						operation: ['list','retrieve','delete','listnames'],
 					}
 				},

@@ -61,7 +61,9 @@ The folks behind n8n have created [an installation guide][3] in the n8n communit
 | Config Logs     | List          | :white_check_mark:| 0.1.2   |
 |                 | Retrieve  		| :white_check_mark:| 0.1.2   |
 |                 | Rollback  		| :x:       |         |
-| Trusted IPs     |           		| :x:       |         |
+| Trusted IPs     | List          | :white_check_mark:| 0.1.3   |
+|                 | Add	       		| :x:       |         |
+|                 | Delete    		| :x:       |         |
 | Projects        | List      		| :white_check_mark:| 0.0.1   |
 |                 | Retrieve  		| :white_check_mark:| 0.0.5   |
 |                 | Delete    		| :white_check_mark:| 0.0.5   |
@@ -98,11 +100,17 @@ Operations
 - [X] Projects Roles
 - [X] Projects Members
 - [X] Config Logs
-- [ ] Trusted IPs
+- [X] Trusted IPs
 - [ ] Integrations
 - [ ] Add support for pagination
 
 ## Version history
+
+### 0.1.3
+
+```diff
++ Added operations for Trusted IPs
+```
 
 ### 0.1.2
 
