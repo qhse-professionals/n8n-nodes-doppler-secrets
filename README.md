@@ -85,7 +85,7 @@ The folks behind n8n have created [an installation guide][3] in the n8n communit
 | Service Account |           		| :x:       |         |
 | Service Account Tokens |     		| :x:       |         |
 | Auth				    |           		| :x:       |         |
-| Share				    |           		| :x:       |         |
+| Share				    | Plane Text 		|:white_check_mark:| 0.1.5   |
 | Audit API		    |           		| :x:       |         |
 | Webhooks		    |           		| :x:       |         |
 
@@ -107,9 +107,16 @@ Operations
 - [X] Config Logs
 - [X] Trusted IPs
 - [X] Integrations
+- [X] Share
 - [ ] Add support for pagination
 
 ## Version history
+
+### 0.1.5
+
+```diff
++ Added operation for Share 
+```
 
 ### 0.1.4
 

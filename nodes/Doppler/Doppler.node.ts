@@ -87,6 +87,10 @@ export class Doppler implements INodeType {
 						name: 'Integration',
 						value: 'integration',
 					},
+					{
+						name: 'Share',
+						value: 'share',
+					},
 				],
 				default: 'secret',
 				required: true,
@@ -840,7 +844,33 @@ export class Doppler implements INodeType {
 						],
 						default: 'list',
 						},
-
+						{
+							displayName: 'Operation',
+							name: 'operation',
+							type: 'options',
+							noDataExpression: true,
+							required: true,
+							displayOptions: {
+								show: {
+									resource: ['share'],
+								},
+							},
+							options: [
+								{
+									name: 'Plain Text',
+									value: 'plain_text',
+									description: 'Share',
+									action: 'Share',
+									routing: {
+										request: {
+											method: 'POST',
+											url: '/v1/share/secrets/plain',
+										},
+									},
+								},
+							],
+							default: 'plain_text',
+							},
       {
         displayName: 'Project',
         name: 'project',
@@ -961,6 +991,70 @@ export class Doppler implements INodeType {
 					}
 				},
       },
+			{
+        displayName: 'Plain Text Secret To Share',
+        name: 'secret',
+        type: 'string',
+				typeOptions: {
+					password: true,
+				},
+        default: '',
+				displayOptions: {
+					show: {
+						resource: ['share'],
+						operation: ['plain_text'],
+					}
+				},
+        routing: {
+          send: {
+            type: 'body',
+            property: 'secret',
+          },
+        },
+      },
+
+			{
+				displayName: 'Additional Fields',
+				name: 'additionalFields',
+				type: 'collection',
+				default: {},
+				placeholder: 'Add Field',
+				displayOptions: {
+					show: {
+						resource: ['share'],
+						operation: ['plain_text'],
+					},
+				},
+				options: [
+					{
+						displayName: 'Expire After Days',
+						name: 'expire_days',
+						type: 'number',
+						default: 1,
+						description: 'Number of days before the link expires. Valid range: 1 to 90.',
+						routing: {
+							send: {
+								type: 'body',
+								property: 'expire_days',
+							},
+						},
+					},
+					{
+						displayName: 'Expire After Views',
+						name: 'expire_views',
+						type: 'number',
+						default: 1,
+						description:
+							'Number of views before the link expires. Valid ranges: 1 to 50. -1 for unlimited.',
+						routing: {
+							send: {
+								type: 'body',
+								property: 'expire_views',
+							},
+						},
+					},
+				],
+			},
 
     ],
   }
