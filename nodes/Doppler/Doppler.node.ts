@@ -83,7 +83,10 @@ export class Doppler implements INodeType {
 						name: 'Trusted IP',
 						value: 'trusted_ip',
 					},
-
+					{
+						name: 'Integration',
+						value: 'integration',
+					},
 				],
 				default: 'secret',
 				required: true,
@@ -765,6 +768,79 @@ export class Doppler implements INodeType {
 					],
 					default: 'list',
 					},
+					{
+						displayName: 'Operation',
+						name: 'operation',
+						type: 'options',
+						noDataExpression: true,
+						required: true,
+						displayOptions: {
+							show: {
+								resource: ['integration'],
+							},
+						},
+						options: [
+							{
+								name: 'List',
+								value: 'list',
+								description: 'List integrations',
+								action: 'List integrations',
+								routing: {
+									request: {
+										method: 'GET',
+										url: '/v3/integrations',
+									},
+								},
+							},
+							{
+								name: 'Retrieve',
+								value: 'retrieve',
+								description: 'Retrieve an existing integration',
+								action: 'Retrieve integration',
+								routing: {
+									request: {
+										method: 'GET',
+										url: '/v3/integrations/integration',
+										qs: {
+											integration: '={{ encodeURIComponent($parameter.integration) }}',
+										},
+									},
+								},
+							},
+							{
+								name: 'Get Options',
+								value: 'get_options',
+								description: 'Get Integration Options',
+								action: 'Get integration options',
+								routing: {
+									request: {
+										method: 'GET',
+										url: '/v3/integrations/integration/options',
+										qs: {
+											integration: '={{ encodeURIComponent($parameter.integration) }}',
+										},
+									},
+								},
+							},
+							{
+								name: 'Delete',
+								value: 'delete',
+								description: 'Delete An Existing Integration',
+								action: 'Delete integration',
+								routing: {
+									request: {
+										method: 'DELETE',
+										url: '/v3/integrations/integration',
+										qs: {
+											integration: '={{ encodeURIComponent($parameter.integration) }}',
+										},
+									},
+								},
+							},
+						],
+						default: 'list',
+						},
+
       {
         displayName: 'Project',
         name: 'project',
@@ -873,6 +949,19 @@ export class Doppler implements INodeType {
 					}
 				},
       },
+			{
+        displayName: 'Integration Slug',
+        name: 'integration',
+        type: 'string',
+        default: '',
+				displayOptions: {
+					show: {
+						resource: ['integration'],
+						operation: ['retrieve','get_options','delete'],
+					}
+				},
+      },
+
     ],
   }
 }

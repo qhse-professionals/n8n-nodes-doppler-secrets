@@ -71,7 +71,12 @@ The folks behind n8n have created [an installation guide][3] in the n8n communit
 |                 | Download  		| :x:       |         |
 |                 | List Names   	| :white_check_mark:| 0.0.5   |
 |                 | Update Notes 	| :x:       |         |
-| Integrations    |           		| :x:       |         |
+| Integrations    | List      		| :white_check_mark:| 0.1.4   |
+|                 | Create    		| :x:       |         |
+|                 | Retrieve  		| :white_check_mark:| 0.1.4   |
+|                 | Get Options 	| :white_check_mark:| 0.1.4   |
+|                 | Update    		| :x:       |         |
+|                 | Delete    		| :white_check_mark:| 0.1.4   |
 | Secret Sync	    |           		| :x:       |         |
 | Dynamic Secrets |           		| :x:       |         |
 | Service Tokens  |           		| :x:       |         |
@@ -101,10 +106,16 @@ Operations
 - [X] Projects Members
 - [X] Config Logs
 - [X] Trusted IPs
-- [ ] Integrations
+- [X] Integrations
 - [ ] Add support for pagination
 
 ## Version history
+
+### 0.1.4
+
+```diff
++ Added operations for Trusted IPs
+```
 
 ### 0.1.3
 
