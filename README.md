@@ -85,7 +85,7 @@ The folks behind n8n have created [an installation guide][3] in the n8n communit
 | Service Account |           		| :x:       |         |
 | Service Account Tokens |     		| :x:       |         |
 | Auth				    |           		| :x:       |         |
-| Share				    | Plane Text 		|:white_check_mark:| 0.1.5   |
+| Share				    | Plain Text 		|:white_check_mark:| 0.1.5   |
 | Audit API		    |           		| :x:       |         |
 | Webhooks		    |           		| :x:       |         |
 
