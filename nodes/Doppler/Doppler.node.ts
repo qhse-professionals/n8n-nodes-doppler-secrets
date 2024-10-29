@@ -88,6 +88,10 @@ export class Doppler implements INodeType {
 						value: 'integration',
 					},
 					{
+						name: 'Auth',
+						value: 'auth',
+					},
+					{
 						name: 'Share',
 						value: 'share',
 					},
@@ -871,6 +875,45 @@ export class Doppler implements INodeType {
 							],
 							default: 'plain_text',
 							},
+							{
+								displayName: 'Operation',
+								name: 'operation',
+								type: 'options',
+								noDataExpression: true,
+								required: true,
+								displayOptions: {
+									show: {
+										resource: ['auth'],
+									},
+								},
+								options: [
+									{
+										name: 'Revoke',
+										value: 'revoke',
+										description: 'Revoke an auth token',
+										action: 'Revoke',
+										routing: {
+											request: {
+												method: 'POST',
+												url: '/v3/auth/revoke',
+											},
+										},
+									},
+									{
+										name: 'Me',
+										value: 'me',
+										description: 'Get information about a token',
+										action: 'Me',
+										routing: {
+											request: {
+												method: 'GET',
+												url: '/v3/me',
+											},
+										},
+									},
+								],
+								default: 'revoke',
+								},
       {
         displayName: 'Project',
         name: 'project',
@@ -1012,7 +1055,6 @@ export class Doppler implements INodeType {
           },
         },
       },
-
 			{
 				displayName: 'Additional Fields',
 				name: 'additionalFields',
@@ -1055,7 +1097,27 @@ export class Doppler implements INodeType {
 					},
 				],
 			},
-
+			{
+        displayName: 'Token To Revoke',
+        name: 'token',
+        type: 'string',
+				typeOptions: {
+					password: true,
+				},
+        default: '',
+				displayOptions: {
+					show: {
+						resource: ['auth'],
+						operation: ['revoke'],
+					}
+				},
+        routing: {
+          send: {
+            type: 'body',
+            property: 'token',
+          },
+        },
+      },
     ],
   }
 }
