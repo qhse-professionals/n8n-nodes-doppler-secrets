@@ -1,6 +1,8 @@
 [![Banner Image](./assets/doppler_banner.png)][2]
 
 # n8n-nodes-doppler-secrets
+[![npm Version][npm-image]][npm-url]
+[![npm Downloads][downloads-image]][downloads-url]
 
 > [!NOTE]
 > This version of the `n8n-nodes-doppler-secrets` n8n Community Node is my ([@qhse-professionals][0]) fork of [the original][1].
@@ -219,3 +221,5 @@ Initial Release
 [2]: https://doppler.com
 [3]: https://docs.n8n.io/integrations/community-nodes/installation
 [4]: https://docs.n8n.io/integrations/community-nodes
+[npm-image]: https://img.shields.io/npm/v/n8n-nodes-doppler-secrets.svg
+[npm-url]: https://npmjs.org/package/n8n-nodes-doppler-secrets
