@@ -223,3 +223,5 @@ Initial Release
 [4]: https://docs.n8n.io/integrations/community-nodes
 [npm-image]: https://img.shields.io/npm/v/n8n-nodes-doppler-secrets.svg
 [npm-url]: https://npmjs.org/package/n8n-nodes-doppler-secrets
+[downloads-image]: https://img.shields.io/npm/dm/n8n-nodes-doppler-secrets.svg
+[downloads-url]: https://npmjs.org/package/n8n-nodes-doppler-secrets
