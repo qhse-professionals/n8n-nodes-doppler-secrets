@@ -1122,11 +1122,8 @@ export class Doppler implements INodeType {
       },
 			{
         displayName: 'Secret',
-        name: 'secretnote',
+        name: 'secnote',
         type: 'string',
-				typeOptions: {
-					password: false,
-				},
         default: '',
 				displayOptions: {
 					show: {
