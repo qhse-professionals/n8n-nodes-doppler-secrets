@@ -177,6 +177,21 @@ export class Doppler implements INodeType {
               },
             },
 					},
+					{
+						name: 'Update Note',
+						value: 'updatenote',
+						description: 'Set a note on a secret',
+						action: 'Update note',
+            routing: {
+              request: {
+                method: 'POST',
+                url: '/v3/projects/project/note',
+                qs: {
+                  project: '={{ encodeURIComponent($parameter.project) }}',
+                },
+              },
+            },
+					},
 				],
 				default: 'list',
 			},
@@ -347,6 +362,19 @@ export class Doppler implements INodeType {
                 qs: {
                   per_page: '=100',
                 },
+              },
+            },
+					},
+					//
+					{
+						name: 'Create',
+						value: 'create',
+						description: 'Create a projects',
+						action: 'Create a project',
+            routing: {
+              request: {
+                method: 'POST',
+                url: '/v3/projects/',
               },
             },
 					},
@@ -922,10 +950,47 @@ export class Doppler implements INodeType {
 				displayOptions: {
 					show: {
 						resource: ['secret','config','config_log','trusted_ip','project','project_member','environment'],
-						operation: ['list','retrieve','delete','listnames','lock','unlock'],
+						operation: ['list','retrieve','delete','listnames','lock','unlock','updatenote'],
 					}
 				},
       },
+      {
+        displayName: 'Project',
+        name: 'projectname',
+        type: 'string',
+				default: '',
+				displayOptions: {
+					show: {
+						resource: ['project'],
+						operation: ['create'],
+					}
+				},
+        routing: {
+          send: {
+            type: 'body',
+            property: 'name',
+          },
+        },
+      },
+      {
+        displayName: 'Description',
+        name: 'projectdescription',
+        type: 'string',
+				default: '',
+				displayOptions: {
+					show: {
+						resource: ['project'],
+						operation: ['create'],
+					}
+				},
+        routing: {
+          send: {
+            type: 'body',
+            property: 'description',
+          },
+        },
+      },
+
       {
         displayName: 'Config',
         name: 'config',
@@ -1052,6 +1117,45 @@ export class Doppler implements INodeType {
           send: {
             type: 'body',
             property: 'secret',
+          },
+        },
+      },
+			{
+        displayName: 'Secret',
+        name: 'secretnote',
+        type: 'string',
+				typeOptions: {
+					password: false,
+				},
+        default: '',
+				displayOptions: {
+					show: {
+						resource: ['secret'],
+						operation: ['updatenote'],
+					}
+				},
+        routing: {
+          send: {
+            type: 'body',
+            property: 'secret',
+          },
+        },
+      },
+			{
+        displayName: 'Note',
+        name: 'note',
+        type: 'string',
+        default: '',
+				displayOptions: {
+					show: {
+						resource: ['secret'],
+						operation: ['updatenote'],
+					}
+				},
+        routing: {
+          send: {
+            type: 'body',
+            property: 'note',
           },
         },
       },

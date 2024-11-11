@@ -6,3 +6,6 @@ dist
 npm-debug.log*
 yarn.lock
 .vscode/launch.json
+nodes/Doppler/Doppler.node.js
+credentials/DopplerApi.credentials.js
+build.md

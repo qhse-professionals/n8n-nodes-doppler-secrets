@@ -16,8 +16,8 @@ The folks behind n8n have created [an installation guide][3] in the n8n communit
 
 ## Operations
 
-| Resource        | Operation 		| Supported | Version |
-|-----------------|---------------|-----------|---------|
+| Resource        | Operation 		| Supported | Version         |
+|-----------------|---------------|-----------|-----------------|
 | Workplace       | Retrieve  		| :white_check_mark:| 0.0.6   |
 |                 | Update    		| :x:       |         |
 | Workplace User  | List          | :white_check_mark:| 0.0.7   |
@@ -28,7 +28,7 @@ The folks behind n8n have created [an installation guide][3] in the n8n communit
 |                 | Create    		| :x:       |         |
 |                 | Update    		| :x:       |         |
 |                 | Delete    		| :white_check_mark:| 0.0.8   |
-|                 | List Permissions| :white_check_mark:| 0.0.8   |
+|                 | List Permissions| :white_check_mark:| 0.0.8 |
 | Activity Logs   | List       		| :white_check_mark:| 0.0.9   |
 |                 | Retrieve  		| :white_check_mark:| 0.0.9   |
 | Projects        | List      		| :white_check_mark:| 0.0.5   |
@@ -41,7 +41,7 @@ The folks behind n8n have created [an installation guide][3] in the n8n communit
 |                 | Create    		| :x:       |         |
 |                 | Update    		| :x:       |         |
 |                 | Delete    		| :white_check_mark:| 0.1.0   |
-|                 | List Permissions| :white_check_mark:| 0.1.0   |
+|                 | List Permissions| :white_check_mark:| 0.1.0 |
 | Projects Members| List       		| :white_check_mark:| 0.1.1   |
 |                 | Retrieve  		| :white_check_mark:| 0.1.1   |
 |                 | Add	       		| :x:       |         |
@@ -66,13 +66,13 @@ The folks behind n8n have created [an installation guide][3] in the n8n communit
 | Trusted IPs     | List          | :white_check_mark:| 0.1.3   |
 |                 | Add	       		| :x:       |         |
 |                 | Delete    		| :x:       |         |
-| Projects        | List      		| :white_check_mark:| 0.0.1   |
+| Secrets         | List      		| :white_check_mark:| 0.0.1   |
 |                 | Retrieve  		| :white_check_mark:| 0.0.5   |
 |                 | Delete    		| :white_check_mark:| 0.0.5   |
 |                 | Update    		| :x:       |         |
 |                 | Download  		| :x:       |         |
 |                 | List Names   	| :white_check_mark:| 0.0.5   |
-|                 | Update Notes 	| :x:       |         |
+|                 | Update Notes 	| :white_check_mark:| 0.1.8   |
 | Integrations    | List      		| :white_check_mark:| 0.1.4   |
 |                 | Create    		| :x:       |         |
 |                 | Retrieve  		| :white_check_mark:| 0.1.4   |
@@ -89,7 +89,9 @@ The folks behind n8n have created [an installation guide][3] in the n8n communit
 | Auth				    | Revoke        |:white_check_mark:| 0.1.6   |
 |      				    | Me          	|:white_check_mark:| 0.1.6   |
 | Share				    | Plain Text 		|:white_check_mark:| 0.1.5   |
-| Audit API		    |           		| :x:       |         |
+| Audit API		    | Workplace  		|:white_check_mark:| 0.1.7   |
+|         		    | Workplace Users |:white_check_mark:| 0.1.7 |
+|         		    | Workplace User  |:white_check_mark:| 0.1.7 |
 | Webhooks		    |           		| :x:       |         |
 
 ## Credentials
@@ -112,9 +114,23 @@ Operations
 - [X] Integrations
 - [X] Share
 - [X] Auth
+- [X] Audit API
 - [ ] Add support for pagination
 
 ## Version history
+
+### 0.1.8
+
+```diff
++ Added create operation for Project API
++ Added Update Note for Secret API
+```
+
+### 0.1.7
+
+```diff
++ Added operation for Audit API
+```
 
 ### 0.1.6
 
