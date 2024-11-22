@@ -624,6 +624,18 @@ export class Doppler implements INodeType {
 						},
 					},
 				},
+				{
+					name: 'Update',
+					value: 'update',
+					description: 'Update a workplace',
+					action: 'Update a workplace',
+					routing: {
+							request: {
+									method: 'POST',
+									url: '/v3/workplace',
+							},
+					},
+				},
 			],
 			default: 'retrieve',
 		},
@@ -1219,6 +1231,61 @@ export class Doppler implements INodeType {
           },
         },
       },
+			{
+				displayName: 'Workplace Name',
+				name: 'workplacename',
+				type: 'string',
+				default: '',
+				displayOptions: {
+						show: {
+								resource: ['workplace'],
+								operation: ['update'],
+						}
+				},
+				routing: {
+						send: {
+								type: 'body',
+								property: 'name',
+						},
+				},
+		},
+		{
+			displayName: 'Billing Email',
+			name: 'billing_email',
+			type: 'string',
+			default: '',
+			displayOptions: {
+					show: {
+							resource: ['workplace'],
+							operation: ['update'],
+					}
+			},
+			routing: {
+					send: {
+							type: 'body',
+							property: 'billing_email',
+					},
+			},
+		},
+		{
+			displayName: 'Security Email',
+			name: 'security_email',
+			type: 'string',
+			default: '',
+			displayOptions: {
+					show: {
+							resource: ['workplace'],
+							operation: ['update'],
+					}
+			},
+			routing: {
+					send: {
+							type: 'body',
+							property: 'security_email',
+					},
+			},
+		},
+
     ],
   }
 }
