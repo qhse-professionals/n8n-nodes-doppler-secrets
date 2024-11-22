@@ -22,7 +22,7 @@ The folks behind n8n have created [an installation guide][3] in the n8n communit
 |                 | Update    		| :white_check_mark:| 0.1.9   |
 | Workplace User  | List          | :white_check_mark:| 0.0.7   |
 |                 | Retrieve  		| :white_check_mark:| 0.0.7   |
-|                 | Update    		| :x:       |         |
+|                 | Update    		| :white_check_mark:| 0.1.10  |
 | Workplace Roles | List          | :white_check_mark:| 0.0.8   |
 |                 | Retrieve  		| :white_check_mark:| 0.0.8   |
 |                 | Create    		| :x:       |         |
@@ -119,6 +119,11 @@ Operations
 
 ## Version history
 
+### 0.1.10
+
+```diff
++ Added update operation for Workplace User API
+```
 ### 0.1.9
 
 ```diff

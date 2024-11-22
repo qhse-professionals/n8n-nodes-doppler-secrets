@@ -40,30 +40,6 @@ export class Doppler implements INodeType {
 						value: 'secret',
 					},
 					{
-						name: 'Config',
-						value: 'config',
-					},
-					{
-						name: 'Config Log',
-						value: 'config_log',
-					},
-					{
-						name: 'Environment',
-						value: 'environment',
-					},
-					{
-						name: 'Project',
-						value: 'project',
-					},
-					{
-						name: 'Project Role',
-						value: 'project_role',
-					},
-					{
-						name: 'Project Member',
-						value: 'project_member',
-					},
-					{
 						name: 'Workplace',
 						value: 'workplace',
 					},
@@ -78,6 +54,30 @@ export class Doppler implements INodeType {
 					{
 						name: 'Activity Log',
 						value: 'activity_log',
+					},
+					{
+						name: 'Project',
+						value: 'project',
+					},
+					{
+						name: 'Project Role',
+						value: 'project_role',
+					},
+					{
+						name: 'Project Member',
+						value: 'project_member',
+					},
+					{
+						name: 'Config',
+						value: 'config',
+					},
+					{
+						name: 'Config Log',
+						value: 'config_log',
+					},
+					{
+						name: 'Environment',
+						value: 'environment',
 					},
 					{
 						name: 'Trusted IP',
@@ -675,6 +675,18 @@ export class Doppler implements INodeType {
 						},
 					},
 				},
+				{
+					name: 'Update',
+					value: 'update',
+					description: 'Update a specific user in a workplace',
+					action: 'Update a workplace user',
+					routing: {
+						request: {
+							method: 'PATCH',
+							url: '=/v3/workplace/users/{{ encodeURIComponent($parameter.user_slug) }}',
+						},
+					},
+				},
 			],
 			default: 'list',
 		},
@@ -1059,10 +1071,29 @@ export class Doppler implements INodeType {
 				displayOptions: {
 					show: {
 						resource: ['workplace_user','project_member'],
-						operation: ['retrieve'],
+						operation: ['retrieve','update'],
 					}
 				},
       },
+			{
+        displayName: 'Access',
+        name: 'user_access',
+				description: 'The identifier of the workplace role. E.g., owner, collaborator, etc.',
+        type: 'string',
+        default: '',
+				displayOptions: {
+					show: {
+						resource: ['workplace_user'],
+						operation: ['update'],
+					}
+				},
+				routing: {
+					send: {
+						type: 'body',
+						property: 'access',
+					},
+      	},
+			},
 			{
         displayName: 'Type of Member',
         name: 'type',
