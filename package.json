@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-doppler-secrets",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Enables you to use Doppler secrets in your n8n workflows.",
   "keywords": [
     "n8n-community-node-package",

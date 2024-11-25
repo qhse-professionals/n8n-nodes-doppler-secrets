@@ -365,7 +365,6 @@ export class Doppler implements INodeType {
               },
             },
 					},
-					//
 					{
 						name: 'Create',
 						value: 'create',
@@ -388,10 +387,22 @@ export class Doppler implements INodeType {
                 method: 'GET',
                 url: '/v3/projects/project',
                 qs: {
-                  project: '={{ encodeURIComponent($parameter.project) }}',
+                  project: '={{ encodeURIComponent($parameter.projectretrieve) }}',
                 },
               },
-            },
+           	},
+					},
+					{
+						name: 'Update',
+						value: 'update',
+						description: 'Update a project',
+						action: 'Update a project',
+            routing: {
+              request: {
+                method: 'POST',
+                url: '/v3/projects/project',
+              },
+           	},
 					},
 					{
 						name: 'Delete',
@@ -401,10 +412,7 @@ export class Doppler implements INodeType {
             routing: {
               request: {
                 method: 'DELETE',
-                url: '/v3/projects/projects',
-                qs: {
-                  project: '={{ encodeURIComponent($parameter.project) }}',
-                },
+                url: '/v3/projects/project',
               },
             },
 					},
@@ -973,20 +981,68 @@ export class Doppler implements INodeType {
 				default: '',
 				displayOptions: {
 					show: {
-						resource: ['secret','config','config_log','trusted_ip','project','project_member','environment'],
+						resource: ['secret','config','config_log','trusted_ip','project_member','environment'],
 						operation: ['list','retrieve','delete','listnames','lock','unlock','updatenote'],
 					}
 				},
       },
       {
         displayName: 'Project',
+        name: 'projectretrieve',
+        type: 'string',
+				default: '',
+				displayOptions: {
+					show: {
+						resource: ['project'],
+						operation: ['retrieve'],
+					}
+				},
+      },
+      {
+        displayName: 'Project',
+        name: 'projectdel',
+        type: 'string',
+				default: '',
+				displayOptions: {
+					show: {
+						resource: ['project'],
+						operation: ['delete'],
+					}
+				},
+        routing: {
+          send: {
+            type: 'body',
+            property: 'project',
+          },
+        },
+      },
+      {
+        displayName: 'Project Old Name',
+        name: 'projectoldname',
+        type: 'string',
+				default: '',
+				displayOptions: {
+					show: {
+						resource: ['project'],
+						operation: ['update'],
+					}
+				},
+        routing: {
+          send: {
+            type: 'body',
+            property: 'project',
+          },
+        },
+      },
+      {
+        displayName: 'Project Name',
         name: 'projectname',
         type: 'string',
 				default: '',
 				displayOptions: {
 					show: {
 						resource: ['project'],
-						operation: ['create'],
+						operation: ['create','update'],
 					}
 				},
         routing: {
@@ -1004,7 +1060,7 @@ export class Doppler implements INodeType {
 				displayOptions: {
 					show: {
 						resource: ['project'],
-						operation: ['create'],
+						operation: ['create','update'],
 					}
 				},
         routing: {

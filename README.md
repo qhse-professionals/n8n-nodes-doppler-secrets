@@ -32,9 +32,9 @@ The folks behind n8n have created [an installation guide][3] in the n8n communit
 | Activity Logs   | List       		| :white_check_mark:| 0.0.9   |
 |                 | Retrieve  		| :white_check_mark:| 0.0.9   |
 | Projects        | List      		| :white_check_mark:| 0.0.5   |
+|                 | Create    		| :white_check_mark:| 0.1.11  |
 |                 | Retrieve  		| :white_check_mark:| 0.0.5   |
-|                 | Create    		| :x:       |         |
-|                 | Update    		| :x:       |         |
+|                 | Update    		| :white_check_mark:| 0.1.11  |
 |                 | Delete    		| :white_check_mark:| 0.0.5   |
 | Projects Roles  | List       		| :white_check_mark:| 0.1.0   |
 |                 | Retrieve  		| :white_check_mark:| 0.1.0   |
@@ -118,6 +118,12 @@ Operations
 - [ ] Add support for pagination
 
 ## Version history
+
+### 0.1.11
+
+```diff
++ Added create and update operation for Projects API
+```
 
 ### 0.1.10
 
