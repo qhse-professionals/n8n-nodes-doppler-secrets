@@ -3,6 +3,7 @@
 # n8n-nodes-doppler-secrets
 [![npm Version][npm-image]][npm-url]
 [![npm Downloads][downloads-image]][downloads-url]
+![Activity](https://img.shields.io/github/last-commit/qhse-professionals/n8n-nodes-doppler-secrets/main)
 
 > [!NOTE]
 > This version of the `n8n-nodes-doppler-secrets` n8n Community Node is my ([@qhse-professionals][0]) fork of [the original][1].
