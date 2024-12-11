@@ -3,6 +3,7 @@
 # n8n-nodes-doppler-secrets
 [![npm Version][npm-image]][npm-url]
 [![npm Downloads][downloads-image]][downloads-url]
+![License](https://img.shields.io/github/license/qhse-professionals/n8n-nodes-doppler-secrets?color=brightgreen&label=License)
 ![Activity](https://img.shields.io/github/last-commit/qhse-professionals/n8n-nodes-doppler-secrets/main)
 
 > [!NOTE]
